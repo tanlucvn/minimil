@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": ["node_modules", ".next", "public/sw.js", "globals.css"]
+    "ignore": ["node_modules", ".next", "public/sw.js"]
   },
   "formatter": {
     "enabled": true,
@@ -25,8 +25,7 @@
       ".husky",
       ".turbo",
       "node_modules",
-      "build",
-      "globals.css"
+      "build"
     ]
   },
   "organizeImports": {
@@ -39,8 +38,7 @@
       ".husky",
       ".turbo",
       "node_modules",
-      "build",
-      "globals.css"
+      "build"
     ]
   },
   "linter": {
