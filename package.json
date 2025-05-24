@@ -51,7 +51,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.7.1",
+    "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.7.1",
     "@tailwindcss/postcss": "^4.1.7",
     "@types/node": "^20",
