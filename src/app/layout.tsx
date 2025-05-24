@@ -29,7 +29,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
         <ThemeProvider>
-          <main className="mx-auto max-w-screen-sm px-6 py-24">{children}</main>
+          <main className="mx-auto max-w-(--breakpoint-sm) px-6 py-24">
+            {children}
+          </main>
           <Analytics />
         </ThemeProvider>
       </body>

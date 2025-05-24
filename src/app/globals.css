@@ -1,76 +1,113 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --background: 0 0% 98%;
-    --foreground: 240 5% 10%;
+@source not "../../public/sw.js";
 
-    --card: 0 0% 98%;
-    --card-foreground: 240 5% 10%;
+@plugin "tailwindcss-animate";
 
-    --popover: 0 0% 98%;
-    --popover-foreground: 240 5% 10%;
+@custom-variant dark (&:is(.dark *));
 
-    --primary: 240 6% 12%;
-    --primary-foreground: 0 0% 98%;
+:root {
+  --radius: 0.625rem;
 
-    --secondary: 0 0% 92%;
-    --secondary-foreground: 240 6% 12%;
+  --background: 0 0% 98%;
+  --foreground: 240 5% 10%;
 
-    --muted: 240 4% 90%;
-    --muted-foreground: 240 3.5% 40%;
+  --card: 0 0% 98%;
+  --card-foreground: 240 5% 10%;
 
-    --accent: 240 4% 88%;
-    --accent-foreground: 240 6% 12%;
+  --popover: 0 0% 98%;
+  --popover-foreground: 240 5% 10%;
 
-    --destructive: 0 70% 50%;
-    --destructive-foreground: 0 0% 98%;
+  --primary: 240 6% 12%;
+  --primary-foreground: 0 0% 98%;
 
-    --border: 240 5% 80%;
-    --input: 240 5% 80%;
-    --ring: 240 5% 10%;
+  --secondary: 0 0% 92%;
+  --secondary-foreground: 240 6% 12%;
 
-    --radius: 0.5rem;
-  }
+  --muted: 240 4% 90%;
+  --muted-foreground: 240 3.5% 40%;
 
-  .dark {
-    --background: 240 6% 8%;
-    --foreground: 240 5% 90%;
+  --accent: 240 4% 88%;
+  --accent-foreground: 240 6% 12%;
 
-    --card: 240 6% 10%;
-    --card-foreground: 240 5% 90%;
+  --destructive: 0 70% 50%;
 
-    --popover: 240 6% 12%;
-    --popover-foreground: 240 5% 90%;
+  --border: 240 5% 80%;
+  --input: 240 5% 80%;
+  --ring: 240 5% 10%;
+}
 
-    --primary: 240 5% 90%;
-    --primary-foreground: 240 6% 12%;
+.dark {
+  --background: 240 6% 8%;
+  --foreground: 240 5% 90%;
 
-    --secondary: 240 5% 16%;
-    --secondary-foreground: 240 5% 90%;
+  --card: 240 6% 10%;
+  --card-foreground: 240 5% 90%;
 
-    --muted: 240 5% 16%;
-    --muted-foreground: 240 3% 55%;
+  --popover: 240 6% 12%;
+  --popover-foreground: 240 5% 90%;
 
-    --accent: 240 5% 18%;
-    --accent-foreground: 240 5% 90%;
+  --primary: 240 5% 90%;
+  --primary-foreground: 240 6% 12%;
 
-    --destructive: 0 63% 38%;
-    --destructive-foreground: 0 0% 98%;
+  --secondary: 240 5% 16%;
+  --secondary-foreground: 240 5% 90%;
 
-    --border: 240 5% 22%;
-    --input: 240 5% 18%;
-    --ring: 240 5% 18%;
-  }
+  --muted: 240 5% 16%;
+  --muted-foreground: 240 3% 55%;
+
+  --accent: 240 5% 18%;
+  --accent-foreground: 240 5% 90%;
+
+  --destructive: 0 63% 38%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 240 5% 22%;
+  --input: 240 5% 18%;
+  --ring: 240 5% 18%;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background font-sans text-foreground antialiased;
+    @apply bg-background text-foreground;
   }
 }

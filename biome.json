@@ -25,7 +25,8 @@
       ".husky",
       ".turbo",
       "node_modules",
-      "build"
+      "build",
+      "public/sw.js"
     ]
   },
   "organizeImports": {
@@ -38,7 +39,8 @@
       ".husky",
       ".turbo",
       "node_modules",
-      "build"
+      "build",
+      "public/sw.js"
     ]
   },
   "linter": {
@@ -46,7 +48,8 @@
     "rules": {
       "recommended": true,
       "complexity": {
-        "useSimplifiedLogicExpression": "warn"
+        "useSimplifiedLogicExpression": "off",
+        "useOptionalChain": "off"
       },
       "correctness": {
         "noUnusedImports": "error",
@@ -54,17 +57,14 @@
         "noUnusedVariables": "error"
       },
       "suspicious": {
+        "noExplicitAny": "off",
         "noArrayIndexKey": "off",
         "noDebugger": "error",
-        "noConsole": {
-          "level": "warn",
-          "options": {
-            "allow": ["warn", "error"]
-          }
-        }
+        "noConsole": "off"
       },
       "a11y": {
-        "noSvgWithoutTitle": "off"
+        "noSvgWithoutTitle": "off",
+        "useKeyWithClickEvents": "off"
       },
       "nursery": {
         "useSortedClasses": {

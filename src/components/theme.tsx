@@ -37,7 +37,7 @@ export const ThemeSwitcher = () => {
           key={label}
           onClick={() => setTheme(label)}
           className={cn(
-            "flex h-6 w-6 items-center justify-center rounded-[4px] text-muted-foreground transition-all hover:opacity-50",
+            "flex h-6 w-6 cursor-pointer items-center justify-center rounded-[4px] text-muted-foreground transition-all hover:opacity-50",
             active ? "bg-primary/10 text-foreground" : "",
           )}
         >

@@ -53,6 +53,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
+    "@tailwindcss/postcss": "^4.1.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -60,9 +61,8 @@
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
-    "postcss": "^8",
     "serwist": "^9.0.12",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^4.1.7",
     "typescript": "^5"
   },
   "husky": {
